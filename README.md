@@ -41,7 +41,7 @@ In use it will look something like this...
 
 ## Optional Attributes
 
-The `{{auto-suggest}}` component also allows you to include placeholder text, assign the input an id, and determine how many keystrokes must be entered before the component begins producing matches for your string.  In order to specify these details, just define the `placeholder` attribute with the value of your desired placeholder text, the `inputId` attribute with that of your desired id, and set the `activeLength` attribute with the number of keystrokes it shouldtake to kick off the processing.
+The `{{auto-suggest}}` component also allows you to include placeholder text, assign the input an id, and determine how many keystrokes must be entered before the component begins producing matches for your string.  In order to specify these details, just define the `placeholder` attribute with the value of your desired placeholder text, the `inputId` attribute with that of your desired id, and set the `activeLength` attribute with the number of keystrokes it should take before the compoent kicks off the processing.
 
 With all attributes defined it will look something like this...
 
@@ -86,7 +86,7 @@ When you set your result body you can loop through the `suggestResults` to displ
 
 ...as you can see the `suggestListSet` property is also available and can be used as an indicator that results will display.
 
-The beauty of you being in control of the result display, is that you can write whatever markup & styling class hooks you like for whaever display you like and produce pretty much anything - that passes for an "auto suggest" dropdown.
+The beauty of you being in control of the result display, is that you can write whatever markup & styling class hooks you like for whatever display you like and produce pretty much anything - that passes for an "auto suggest" dropdown.
 
 If you need to re-arrange the location of your `resultBodyComponent` just over-write the `auto-suggest.hbs` template by making one in your application's `yourApp/app/templates/components/` folder and copy what's in your `yourApp/node_modules/ember-cli-auto-suggest/addon/templates/components/auto-suggest.hbs` to the new file - then just add whatever you like or re-arrange in whatever way you need.
 
@@ -139,7 +139,7 @@ export default Controller.extend({
 {{outlet}}
 ```
 
-### components/suggest-results.js
+### components/suggest-results.js (my generated component)
 ```
 import Component from '@ember/component';
 
@@ -149,7 +149,7 @@ export default Component.extend({
 });
 ```
 
-### templates/components/suggest-results.hbs
+### templates/components/suggest-results.hbs (my generated component's template)
 ```
 {{input type="text" id=inputId placeholder=placeholder value=inputVal}}
 {{component resultBodyComponent suggestResults=resultList suggestListSet=resultListSet}}
