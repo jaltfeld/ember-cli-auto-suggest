@@ -1,7 +1,7 @@
 ember-cli-auto-suggest
 ==============================================================================
 
-[Short description of the addon.]
+An ember addon which provides an input and an "auto suggest" listing underneath the input based on whats typed...
 
 Installation
 ------------------------------------------------------------------------------
