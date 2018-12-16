@@ -1,0 +1,6 @@
+{{! template-lint-disable }}
+<ul class="test-result{{if suggestListSet ' active'}}">
+	{{#each suggestResults as |result|}}
+		<li><a href="some/loction/{{result.id}}">{{result.name}}, AKA: {{result.alias}}, AT: {{result.address}}</a></li>
+	{{/each}}
+</ul>

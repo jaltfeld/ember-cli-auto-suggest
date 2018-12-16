@@ -1,3 +1,27 @@
-<h2 id="title">Welcome to Ember</h2>
-
+{{! template-lint-disable }}
+<h2 id="title">Welcome to Ember, Baby!</h2>
+{{#each payload as |listing|}}
+	<div style="display:table-row">
+		<div style="display:table-cell">
+			Name: {{listing.name}}, 
+		</div>
+		<div style="display:table-cell">
+			AKA: {{listing.alias}}, 
+		</div>
+		<div style="display:table-cell">
+			Address: {{listing.address}}
+		</div>
+	</div>
+{{/each}}
+<br />
+<br />
+<br />
+{{auto-suggest 
+	placeholder=placeholder
+	inputId=identifier 
+	filterProps=filterTypes 
+	findAllList=payload 
+	resultBodyComponent="suggest-results"
+	activeLength=2
+}}
 {{outlet}}
